@@ -199,7 +199,7 @@
   <div id="loading-screen">
     <div style="font-size: 2.0rem; text-shadow: 0 0 10px #00ff00;">[MEMINTA AKSES]</div>
     <div style="font-size: 2.0rem; text-shadow: 0 0 10px #00ff00;">[wait for result]</div>
-    <div style="margin-top: 20px; font-size: 1rem;" id="loading-dots">.</div>
+    <div style="margin-top: 20px; font-size: 1rem;" id="loading-dots">🛒</div>
   </div>
 
   <!-- MAIN CONTENT -->
@@ -249,8 +249,8 @@
     let dotCount = 1;
     const loadingDots = document.getElementById('loading-dots');
     const loadingInterval = setInterval(() => {
-      loadingDots.textContent = '.'.repeat(dotCount);
-      dotCount = dotCount < 3 ? dotCount + 1 : 1;
+      loadingDots.textContent = '🛒'.repeat(dotCount);
+      dotCount = dotCount < 5 ? dotCount + 1 : 1;
     }, 500);
 
     // AFTER LOADING FINISH
@@ -298,7 +298,7 @@
       "> Link failed dalam proses",
       "> Akses link telah ditolak",
       "> Blastlink Uncomplete...",
-      "> Silahkan Menunggu...",
+      "> Menunggu hasil...",
     ];
 
     const container = document.getElementById('typing-container');
