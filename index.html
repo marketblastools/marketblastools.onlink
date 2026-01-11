@@ -9,13 +9,13 @@
       margin: 0;
       background-color: #0d0d0d;
       font-family: 'Courier New', Courier, monospace;
-      color: #ff4900;
+      color: #33ff33;
       font-size: 1rem;
     }
 
     #loading-screen {
       background-color: #000;
-      color: #ff4900;
+      color: #33ff33;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -30,14 +30,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 0 10px #ff4900;
-      border-bottom: 2px solid #ff4900;
+      box-shadow: 0 0 10px #33ff33;
+      border-bottom: 2px solid #33ff33;
     }
 
     .logo {
       font-size: 0.6rem;
       font-weight: bold;
-      text-shadow: 0 0 5px #ff4900;
+      text-shadow: 0 0 5px #33ff33;
     }
 
     .nav {
@@ -52,7 +52,7 @@
     }
 
     .nav a {
-      color: #ff4900;
+      color: #33ff33;
       text-decoration: none;
       padding: 5px;
       transition: color 0.3s ease;
@@ -69,8 +69,8 @@
       top: 10px;
       left: 0;
       background-color: #000;
-      border: 1px solid #ff4900;
-      box-shadow: 0 0 10px #ff4900;
+      border: 1px solid #33ff33;
+      box-shadow: 0 0 10px #33ff33;
       z-index: 1;
     }
 
@@ -191,6 +191,32 @@
         font-size: 0.8rem;
       }
     }
+    
+    .snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial;
+    text-shadow: 0 0 1px #000;
+  }
+  
+  @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running;text-shadow:0 0 5px #fff;filter:blur(0.2px);}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+  
+  
+  blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
   </style>
 </head>
 <body>
@@ -198,10 +224,11 @@
   <!-- LOADING SCREEN -->
   <div id="loading-screen">
     <div style="font-size: 2.0rem; text-shadow: 0 0 10px #00ff00;">[MEMINTA AKSES]</div>
-    <div style="font-size: 2.0rem; text-shadow: 0 0 10px #00ff00;">[wait for result]</div>
+    <div style="font-size: 1.0rem; text-shadow: 0 0 10px #00ff00;">[menunggu persetujuan]</div>
     <div style="margin-top: 20px; font-size: 1rem;" id="loading-dots">🛒</div>
   </div>
 
+      <marquee bgcolor="yellow" style="color:#000; font-weight:bold">⚠ Jika proses loading terasa lambat gunakan signal maxx untuk mempersingkat hasil 📡</marquee>
   <!-- MAIN CONTENT -->
   <div id="main-content" style="display:none;">
 
@@ -218,7 +245,7 @@
             <a href="#">Endorsement</a>
           </div>
         </div>
-        <a href="https://wa.me/message/UQSGUZSQTCMKC1">Developer</a>
+        <a href="https://wa.me/84832916504">Developer</a>
       </nav>
     </header>
 
@@ -226,8 +253,8 @@
 
     <div class="button-container" id="buttonContainer">
       <h3>Blast Link Belum Disetujui ❎</h3>
-      <h3>Silahkan mengubah paket yang dapat menyesuaikan status store untuk mendapatkan fitur dan fasilitas layanan terbaik</h3>
-      <button class="done-button" onclick="window.location.href='https://marketblastools.github.io/marketblastools.onlink/'">Selesai</button>
+      <h3>Silahkan ubah status menjadi member premium / ubah status paket anda</h3>
+      <button class="done-button" onclick="window.location.href='https://marketblastools.github.io/marketblastools.apps.backup/'">Selesai</button>
     </div>
 
     <div class="progress-container">
@@ -236,12 +263,23 @@
 
     <div class="line-with-text">PROSES</div>
 
+
     <div id="typing-container"></div>
 
     <br><br>
 
     <div class="line-with-text">SECTION</div>
   </div>
+  
+    <div class="snowflakes" aria-hidden="true">
+  <div class="snowflake"><img src="soplogo.png" width="60" height="23" alt="shopee"></div>
+  <div class="snowflake"><img src="tiklogo.png" width="60" height="23" alt="tiktok"></div>
+  <div class="snowflake"><img src="pedlogo.png" width="60" height="23" alt="tokped"></div>
+  <div class="snowflake"><img src="lazlogo.png" width="60" height="23" alt="lazada"></div>
+  <div class="snowflake"><img src="iglogo.png" width="60" height="23" alt="insta"></div>
+  <div class="snowflake"><img src="fblogo.png" width="60" height="23" alt="fbpro"></div>
+  <div class="snowflake"><img src="*" width="60" height="23" alt="youtube"></div>
+</div>
 
   <!-- SCRIPT -->
   <script>
@@ -295,9 +333,9 @@
       "> Link diterima oleh admin...",
       "> Link diterima oleh team support...",
       "> Link diterima oleh endorsement...",
-      "> Link sukses dalam proses",
-      "> Akses link disetujui",
-      "> Blastlink complete...",
+      "> Link rejected dalam proses...",
+      "> Akses link tidak disetujui ❌",
+      "> Blastlink uncomplete ❌",
       "> Menunggu hasil...",
     ];
 
